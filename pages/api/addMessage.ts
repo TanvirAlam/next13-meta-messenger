@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import { KeyboardReturnOutlined } from '@mui/icons-material'
 import type { NextApiRequest, NextApiResponse } from 'next'
+import { serverPusher } from '../../pusher'
 import redis from '../../redis'
 import { Message } from '../../typings'
 
@@ -23,12 +23,13 @@ export default async function handler(
 
     const { message } = req.body
 
-    const meMessage = {
+    const newMessage = {
         ...message,
         created_at: Date.now()
     }
 
-    await redis.hset('messages', message.id, JSON.stringify(meMessage))
+    await redis.hset('messages', message.id, JSON.stringify(newMessage))
+    serverPusher.trigger('messages', 'new-message', newMessage)
 
-    res.status(200).json({ message: meMessage })
+    res.status(200).json({ message: newMessage })
 }
