@@ -23,3 +23,34 @@ Powering realtime experiences for mobile and web Bi-directional hosted APIs that
 
 
 Next13, tailwindcss, upstash for redis db, pusher, TypeScrip, 2 api POST and GET, Use SWR for data fetching
+
+- Build Showcase
+- Upstash Sponsorship
+- Build Tech
+- Setting Up Next.js 13 & Tailwind CSS
+- Planning Out The Build
+- Building the Header Component
+- Creating the Message List Component
+- Building the Chat Input Component (1/4)
+- Setting up Upstash
+- Implementing UUID Library
+- Building the Chat Input Component (2/4)
+- Setting up Type Definitions for TypeScript
+- Building the Chat Input Component (3/4)
+- Building the Add Message API Endpoint using Redis
+- Explaining and Implementing SWR
+- Building the Get Messages API Endpoint
+- Building the Chat Input Component (3/4)
+- Building the Message List Component
+- Building the Message Component
+- Explaining and Implementing Pusher
+- Implementing SSR with Next.js 13 (1/2)
+- Implementing the Loading Functionality
+- Implementing NextAuth Authentication with Facebook (1/2)
+- Creating a Facebook App for Authentication
+- Implementing the Sign In Functionality (with 2 Different Approaches)
+- Implementing the Sign Out Functionality
+- Implementing SSR with Next.js 13 (2/2)
+- Implementing Timestamp Functionality
+- Explaining and Implementing Middleware
+- Final Build Demo & Explanation
