@@ -20,3 +20,6 @@ Powering realtime experiences for mobile and web Bi-directional hosted APIs that
 
 - <https://www.npmjs.com/package/react-timeago>
 - `npm i react-timeago`
+
+
+Next13, tailwindcss, upstash for redis db, pusher, TypeScrip, 2 api POST and GET, Use SWR for data fetching
