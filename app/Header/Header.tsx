@@ -1,18 +1,17 @@
 
 import Image from 'next/image'
 import LogoutButton from './LogoutButton';
+import { unstable_getServerSession } from 'next-auth';
 
-type Props = {}
-
-export default function Header({}: Props) {
-    const session = true;
+export default async function Header() {
+    const session = await unstable_getServerSession();
 
     if (session) {
         return (
             <header className="sticky top-0 z-50 bg-white flex justify-between items-center p-10 shadow-sm">
                 <div className="flex space-x-2">
                     <Image 
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/800px-User_icon_2.svg.png"
+                        src={session.user?.image!}
                         alt="Profile Picture"
                         width={50}
                         height={10}
@@ -20,13 +19,14 @@ export default function Header({}: Props) {
                     />
                     <div>
                         <p className="text-blue-400">Logged in as:</p>
-                        <p className="font-bold text-lg">Tanvir Alam</p>
+                        <p className="font-bold text-lg">{session.user?.name}</p>
                     </div>
                 </div>
                 <LogoutButton buttonText="Sign Out" />
             </header>
         )
     }
+
   return (
     <header className="sticky top-0 z-50 bg-white flex justify-center items-center p-10 shadow-sm">
         <div className="flex flex-col items-center space-y-5">

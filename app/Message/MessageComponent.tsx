@@ -1,3 +1,6 @@
+'use client'
+
+import { useSession } from 'next-auth/react';
 import Image from 'next/image';
 import React from 'react'
 import { Message } from '../../typings';
@@ -7,12 +10,13 @@ type Props = {
 }
 
 export default function MessageComponent({message}: Props) {
-  const isUser = true;
+  const { data: session } = useSession()
+  const isUser = session?.user?.email === message.email
 
   return (
     <div className={`flex w-fit ${isUser ? 'ml-auto' : ''}`}>
       <div className={`flex-shrink-0 ${isUser ? 'order-2' : ''}`}>
-        <Image src={message.profilePic} className="rounded-full mx-2" height={10} width={50} alt="Profile Pic" />
+        <Image src={session?.user?.image!} className="rounded-full mx-2" height={10} width={50} alt="Profile Pic" />
       </div>
       <div>
         <div>
