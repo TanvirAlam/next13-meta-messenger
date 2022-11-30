@@ -10,3 +10,5 @@ Powering realtime experiences for mobile and web Bi-directional hosted APIs that
 - `npm i pusher pusher-js encoding`
 - Added: `pusher.ts`
 - `Debug console` you can listen to a call
+
+- <https://flowbite.com/>: Build websites even faster with components on top of Tailwind CSS
