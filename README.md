@@ -16,3 +16,7 @@ Powering realtime experiences for mobile and web Bi-directional hosted APIs that
 -Next Auth 13: <https://next-auth.js.org/getting-started/example>
 - `npm i next-auth` and follow their structure
 - `pages/api/auth/[...nextauth].js`
+
+
+- <https://www.npmjs.com/package/react-timeago>
+- `npm i react-timeago`
